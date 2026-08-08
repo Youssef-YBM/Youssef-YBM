@@ -1,289 +1,431 @@
 ```svg
-<svg width="1200" height="420" viewBox="0 0 1200 420"
+<svg width="1280" height="440" viewBox="0 0 1280 440"
      xmlns="http://www.w3.org/2000/svg">
 
-  <defs>
+<defs>
 
-    <!-- Background -->
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#020617"/>
-      <stop offset="55%" stop-color="#0F172A"/>
-      <stop offset="100%" stop-color="#061A2E"/>
-    </linearGradient>
+  <!-- Background -->
+  <linearGradient id="background"
+                  x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#030712"/>
+    <stop offset=".45" stop-color="#0B1220"/>
+    <stop offset="1" stop-color="#071A2D"/>
+  </linearGradient>
 
-    <!-- Glass -->
-    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".10"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity=".025"/>
-    </linearGradient>
+  <!-- Blue atmospheric glow -->
+  <radialGradient id="blueGlow">
+    <stop offset="0" stop-color="#2563EB" stop-opacity=".38"/>
+    <stop offset=".45" stop-color="#2563EB" stop-opacity=".12"/>
+    <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+  </radialGradient>
 
-    <!-- Blue glow -->
-    <radialGradient id="glowBlue">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity=".45"/>
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
-    </radialGradient>
+  <!-- Cyan glow -->
+  <radialGradient id="cyanGlow">
+    <stop offset="0" stop-color="#06B6D4" stop-opacity=".28"/>
+    <stop offset="1" stop-color="#06B6D4" stop-opacity="0"/>
+  </radialGradient>
 
-    <!-- Cyan glow -->
-    <radialGradient id="glowCyan">
-      <stop offset="0%" stop-color="#06B6D4" stop-opacity=".35"/>
-      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
-    </radialGradient>
+  <!-- Glass -->
+  <linearGradient id="glass"
+                  x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity=".09"/>
+    <stop offset=".5" stop-color="#FFFFFF" stop-opacity=".035"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity=".015"/>
+  </linearGradient>
 
-    <!-- Grid -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40"
-            fill="none"
-            stroke="#38BDF8"
-            stroke-opacity=".055"/>
-    </pattern>
+  <!-- Border -->
+  <linearGradient id="border"
+                  x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#38BDF8" stop-opacity=".35"/>
+    <stop offset=".5" stop-color="#FFFFFF" stop-opacity=".08"/>
+    <stop offset="1" stop-color="#2563EB" stop-opacity=".28"/>
+  </linearGradient>
 
-    <!-- Blur -->
-    <filter id="blur">
-      <feGaussianBlur stdDeviation="35"/>
-    </filter>
+  <!-- Grid -->
+  <pattern id="grid"
+           width="42"
+           height="42"
+           patternUnits="userSpaceOnUse">
 
-    <filter id="smallBlur">
-      <feGaussianBlur stdDeviation="8"/>
-    </filter>
-
-    <!-- Glass shadow -->
-    <filter id="shadow">
-      <feDropShadow dx="0" dy="18" stdDeviation="25"
-                    flood-color="#000000"
-                    flood-opacity=".35"/>
-    </filter>
-
-    <!-- Clip -->
-    <clipPath id="rounded">
-      <rect x="20" y="20" width="1160" height="380" rx="28"/>
-    </clipPath>
-
-  </defs>
-
-
-  <!-- ================================= -->
-  <!-- BACKGROUND -->
-  <!-- ================================= -->
-
-  <rect width="1200" height="420"
-        fill="#020617"/>
-
-  <rect x="20" y="20"
-        width="1160"
-        height="380"
-        rx="28"
-        fill="url(#bg)"/>
-
-  <g clip-path="url(#rounded)">
-
-    <!-- Grid -->
-    <rect x="20" y="20"
-          width="1160"
-          height="380"
-          fill="url(#grid)"/>
-
-    <!-- Ambient glows -->
-    <circle cx="1050" cy="80"
-            r="230"
-            fill="url(#glowBlue)"
-            filter="url(#blur)">
-      <animate attributeName="cx"
-               values="1050;980;1050"
-               dur="9s"
-               repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="120" cy="360"
-            r="200"
-            fill="url(#glowCyan)"
-            filter="url(#blur)">
-      <animate attributeName="cy"
-               values="360;320;360"
-               dur="11s"
-               repeatCount="indefinite"/>
-    </circle>
-
-
-    <!-- ================================= -->
-    <!-- GLASS PANELS -->
-    <!-- ================================= -->
-
-    <rect x="60" y="60"
-          width="1080"
-          height="300"
-          rx="24"
-          fill="url(#glass)"
-          stroke="#FFFFFF"
-          stroke-opacity=".10"/>
-
-    <rect x="80" y="80"
-          width="620"
-          height="260"
-          rx="20"
-          fill="#020617"
-          fill-opacity=".20"
+    <path d="M42 0H0V42"
+          fill="none"
           stroke="#38BDF8"
-          stroke-opacity=".08"/>
+          stroke-opacity=".045"/>
+
+  </pattern>
+
+  <!-- Blur -->
+  <filter id="blur">
+    <feGaussianBlur stdDeviation="45"/>
+  </filter>
+
+  <filter id="softBlur">
+    <feGaussianBlur stdDeviation="10"/>
+  </filter>
+
+  <!-- Shadow -->
+  <filter id="shadow">
+
+    <feDropShadow
+      dx="0"
+      dy="20"
+      stdDeviation="25"
+      flood-color="#000"
+      flood-opacity=".45"/>
+
+  </filter>
+
+  <!-- Clip -->
+  <clipPath id="clip">
+    <rect x="18"
+          y="18"
+          width="1244"
+          height="404"
+          rx="30"/>
+  </clipPath>
+
+</defs>
 
 
-    <!-- ================================= -->
-    <!-- ARCHITECTURE NETWORK -->
-    <!-- ================================= -->
+<!-- ================================================= -->
+<!-- BACKGROUND -->
+<!-- ================================================= -->
 
-    <g stroke="#38BDF8"
-       stroke-opacity=".22"
-       fill="none">
+<rect width="1280"
+      height="440"
+      rx="32"
+      fill="#020617"/>
 
-      <path d="M780 110 L900 165 L1040 120"/>
-      <path d="M900 165 L1010 240 L1100 195"/>
-      <path d="M780 110 L820 270 L1010 240"/>
-      <path d="M820 270 L930 315 L1100 195"/>
+<rect x="18"
+      y="18"
+      width="1244"
+      height="404"
+      rx="30"
+      fill="url(#background)"/>
 
-    </g>
+<g clip-path="url(#clip)">
 
+  <!-- Grid -->
 
-    <!-- Nodes -->
-
-    <g fill="#38BDF8">
-
-      <circle cx="780" cy="110" r="4">
-        <animate attributeName="r"
-                 values="3;6;3"
-                 dur="2.2s"
-                 repeatCount="indefinite"/>
-      </circle>
-
-      <circle cx="900" cy="165" r="5">
-        <animate attributeName="r"
-                 values="4;8;4"
-                 dur="2.7s"
-                 repeatCount="indefinite"/>
-      </circle>
-
-      <circle cx="1040" cy="120" r="4">
-        <animate attributeName="r"
-                 values="3;7;3"
-                 dur="2.4s"
-                 repeatCount="indefinite"/>
-      </circle>
-
-      <circle cx="1010" cy="240" r="5">
-        <animate attributeName="r"
-                 values="4;8;4"
-                 dur="3s"
-                 repeatCount="indefinite"/>
-      </circle>
-
-      <circle cx="820" cy="270" r="4">
-        <animate attributeName="r"
-                 values="3;7;3"
-                 dur="2.5s"
-                 repeatCount="indefinite"/>
-      </circle>
-
-      <circle cx="930" cy="315" r="4"/>
-
-      <circle cx="1100" cy="195" r="5">
-        <animate attributeName="r"
-                 values="4;8;4"
-                 dur="2.8s"
-                 repeatCount="indefinite"/>
-      </circle>
-
-    </g>
+  <rect width="1280"
+        height="440"
+        fill="url(#grid)"/>
 
 
-    <!-- ================================= -->
-    <!-- LEFT CONTENT -->
-    <!-- ================================= -->
+  <!-- Ambient light -->
 
-    <text x="110"
-          y="125"
-          font-family="Inter, Arial, sans-serif"
-          font-size="14"
-          letter-spacing="4"
-          fill="#38BDF8">
-      SOFTWARE / SYSTEMS
-    </text>
+  <circle cx="1080"
+          cy="80"
+          r="300"
+          fill="url(#blueGlow)"
+          filter="url(#blur)">
 
-    <text x="105"
-          y="185"
-          font-family="Inter, Arial, sans-serif"
-          font-size="48"
-          font-weight="700"
-          letter-spacing="-2"
-          fill="#F8FAFC">
-      YOUSSEF ERRAMI
-    </text>
+    <animate attributeName="cx"
+             values="1080;1000;1080"
+             dur="12s"
+             repeatCount="indefinite"/>
 
-    <rect x="110"
-          y="205"
-          width="70"
-          height="3"
-          rx="2"
-          fill="#38BDF8">
-      <animate attributeName="width"
-               values="40;100;70"
-               dur="3s"
-               repeatCount="indefinite"/>
-    </rect>
-
-    <text x="110"
-          y="245"
-          font-family="Inter, Arial, sans-serif"
-          font-size="19"
-          font-weight="600"
-          fill="#CBD5E1">
-      ERP ARCHITECT
-    </text>
-
-    <text x="110"
-          y="275"
-          font-family="Inter, Arial, sans-serif"
-          font-size="17"
-          fill="#94A3B8">
-      Software Engineer · Full-Stack · Robotics
-    </text>
-
-    <text x="110"
-          y="315"
-          font-family="JetBrains Mono, monospace"
-          font-size="13"
-          fill="#64748B">
-      Enterprise Systems → Automation → Intelligent Machines
-    </text>
+  </circle>
 
 
-    <!-- ================================= -->
-    <!-- TECH LABELS -->
-    <!-- ================================= -->
+  <circle cx="180"
+          cy="390"
+          r="260"
+          fill="url(#cyanGlow)"
+          filter="url(#blur)">
 
-    <g font-family="JetBrains Mono, monospace"
-       font-size="11"
-       fill="#64748B">
+    <animate attributeName="cy"
+             values="390;350;390"
+             dur="10s"
+             repeatCount="indefinite"/>
 
-      <text x="760" y="365">ERP</text>
-      <text x="820" y="365">AI</text>
-      <text x="865" y="365">IoT</text>
-      <text x="915" y="365">API</text>
-      <text x="970" y="365">SQL</text>
-      <text x="1025" y="365">C++</text>
-      <text x="1080" y="365">DOCKER</text>
+  </circle>
 
-    </g>
+
+  <!-- ================================================= -->
+  <!-- MAIN GLASS CONTAINER -->
+  <!-- ================================================= -->
+
+  <rect x="52"
+        y="52"
+        width="1176"
+        height="336"
+        rx="26"
+        fill="url(#glass)"
+        stroke="url(#border)"
+        stroke-width="1"/>
+
+
+  <!-- ================================================= -->
+  <!-- LEFT GLASS PANEL -->
+  <!-- ================================================= -->
+
+  <rect x="78"
+        y="78"
+        width="585"
+        height="284"
+        rx="20"
+        fill="#020617"
+        fill-opacity=".23"
+        stroke="#FFFFFF"
+        stroke-opacity=".055"/>
+
+
+  <!-- Small status -->
+
+  <circle cx="112"
+          cy="112"
+          r="4"
+          fill="#22C55E">
+
+    <animate attributeName="opacity"
+             values=".35;1;.35"
+             dur="2s"
+             repeatCount="indefinite"/>
+
+  </circle>
+
+  <text x="126"
+        y="117"
+        font-family="JetBrains Mono,monospace"
+        font-size="11"
+        letter-spacing="2"
+        fill="#64748B">
+
+    SYSTEMS / SOFTWARE
+
+  </text>
+
+
+  <!-- NAME -->
+
+  <text x="108"
+        y="180"
+        font-family="Inter,Arial,sans-serif"
+        font-size="48"
+        font-weight="750"
+        letter-spacing="-2"
+        fill="#F8FAFC">
+
+    YOUSSEF ERRAMI
+
+  </text>
+
+
+  <!-- Accent line -->
+
+  <rect x="110"
+        y="198"
+        width="90"
+        height="3"
+        rx="2"
+        fill="#38BDF8">
+
+    <animate attributeName="width"
+             values="45;120;90"
+             dur="3s"
+             repeatCount="indefinite"/>
+
+  </rect>
+
+
+  <!-- ROLE -->
+
+  <text x="108"
+        y="242"
+        font-family="Inter,Arial,sans-serif"
+        font-size="21"
+        font-weight="650"
+        fill="#E2E8F0">
+
+    ERP ARCHITECT
+
+  </text>
+
+  <text x="108"
+        y="270"
+        font-family="Inter,Arial,sans-serif"
+        font-size="16"
+        fill="#94A3B8">
+
+    Software Engineer · Full-Stack · Robotics
+
+  </text>
+
+
+  <!-- Description -->
+
+  <text x="108"
+        y="310"
+        font-family="JetBrains Mono,monospace"
+        font-size="12"
+        fill="#64748B">
+
+    enterprise systems / automation / intelligent machines
+
+  </text>
+
+
+  <!-- ================================================= -->
+  <!-- RIGHT ARCHITECTURE -->
+  <!-- ================================================= -->
+
+  <!-- connections -->
+
+  <g fill="none"
+     stroke="#38BDF8"
+     stroke-opacity=".18"
+     stroke-width="1.2">
+
+    <path d="M760 135 L880 100 L1010 145 L1150 110"/>
+
+    <path d="M760 135 L835 245 L990 225 L1150 110"/>
+
+    <path d="M835 245 L920 315 L1090 285 L1150 110"/>
+
+    <path d="M880 100 L920 315"/>
+
+    <path d="M1010 145 L990 225"/>
 
   </g>
 
 
-  <!-- Border -->
+  <!-- animated data packet -->
 
-  <rect x="20" y="20"
-        width="1160"
-        height="380"
-        rx="28"
-        fill="none"
-        stroke="#38BDF8"
-        stroke-opacity=".15"/>
+  <circle r="3"
+          fill="#67E8F9">
+
+    <animateMotion
+      dur="3.8s"
+      repeatCount="indefinite"
+      path="M760 135 L880 100 L1010 145 L1150 110"/>
+
+  </circle>
+
+
+  <circle r="3"
+          fill="#60A5FA">
+
+    <animateMotion
+      dur="4.6s"
+      repeatCount="indefinite"
+      path="M760 135 L835 245 L990 225 L1150 110"/>
+
+  </circle>
+
+
+  <!-- nodes -->
+
+  <g fill="#38BDF8">
+
+    <circle cx="760" cy="135" r="4"/>
+
+    <circle cx="880" cy="100" r="5">
+
+      <animate attributeName="r"
+               values="4;7;4"
+               dur="2.5s"
+               repeatCount="indefinite"/>
+
+    </circle>
+
+    <circle cx="1010" cy="145" r="4"/>
+
+    <circle cx="1150" cy="110" r="6">
+
+      <animate attributeName="r"
+               values="5;9;5"
+               dur="2.8s"
+               repeatCount="indefinite"/>
+
+    </circle>
+
+    <circle cx="835" cy="245" r="4"/>
+
+    <circle cx="990" cy="225" r="5"/>
+
+    <circle cx="920" cy="315" r="4"/>
+
+    <circle cx="1090" cy="285" r="4"/>
+
+  </g>
+
+
+  <!-- Node labels -->
+
+  <g font-family="JetBrains Mono,monospace"
+     font-size="10"
+     fill="#64748B">
+
+    <text x="742" y="125">API</text>
+
+    <text x="866" y="88">ERP</text>
+
+    <text x="995" y="132">SQL</text>
+
+    <text x="1128" y="96">CLOUD</text>
+
+    <text x="815" y="265">IOT</text>
+
+    <text x="970" y="245">AI</text>
+
+    <text x="900" y="335">ROBOT</text>
+
+    <text x="1065" y="305">DOCKER</text>
+
+  </g>
+
+
+  <!-- ================================================= -->
+  <!-- STACK STRIP -->
+  <!-- ================================================= -->
+
+  <rect x="705"
+        y="345"
+        width="485"
+        height="30"
+        rx="15"
+        fill="#020617"
+        fill-opacity=".45"
+        stroke="#FFFFFF"
+        stroke-opacity=".06"/>
+
+
+  <g font-family="JetBrains Mono,monospace"
+     font-size="10"
+     fill="#64748B">
+
+    <text x="730" y="365">NEXT</text>
+
+    <text x="790" y="365">REACT</text>
+
+    <text x="860" y="365">NEST</text>
+
+    <text x="920" y="365">POSTGRES</text>
+
+    <text x="1010" y="365">C++</text>
+
+    <text x="1055" y="365">ESP32</text>
+
+    <text x="1120" y="365">DOCKER</text>
+
+  </g>
+
+</g>
+
+
+<!-- ================================================= -->
+<!-- OUTER BORDER -->
+<!-- ================================================= -->
+
+<rect x="18"
+      y="18"
+      width="1244"
+      height="404"
+      rx="30"
+      fill="none"
+      stroke="#38BDF8"
+      stroke-opacity=".12"/>
 
 </svg>
 ```
