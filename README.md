@@ -7,7 +7,10 @@
 
 <br>
 
-`ENTERPRISE SYSTEMS` &nbsp;•&nbsp; `FULL-STACK` &nbsp;•&nbsp; `ROBOTICS` &nbsp;•&nbsp; `AI`
+`ENTERPRISE SYSTEMS` &nbsp;•&nbsp;
+`FULL-STACK` &nbsp;•&nbsp;
+`ROBOTICS` &nbsp;•&nbsp;
+`AI`
 
 <br><br>
 
@@ -41,13 +44,20 @@ Robotics Enthusiast
 
 <br>
 
-**FOCUS**
+### FOCUS
 
 Enterprise Software  
 ERP Architecture  
 Automation  
 Robotics / IoT  
 AI Systems
+
+<br>
+
+### MINDSET
+
+> Build systems,  
+> not demos.
 
 </td>
 
@@ -57,22 +67,30 @@ AI Systems
 
 I design and build **complete digital solutions for enterprises** — from architecture and database design to backend, frontend and deployment.
 
-My private work is mostly focused on solving **real business problems**, so many of my repositories remain private.
+My private work is mainly focused on solving **real business problems**, so many of my repositories remain private.
 
 ```text
 BUSINESS
-   ↓
+   │
+   ▼
 ARCHITECTURE
-   ↓
-FRONTEND ───── BACKEND
-   │              │
- React          NestJS
- Next.js        Node.js
- Angular          │
-   └──────┬───────┘
-          ↓
-      PostgreSQL
-          ↓
-        Docker
-          ↓
-    ENTERPRISE APP
+   │
+   ├───────────────┐
+   ▼               ▼
+FRONTEND        BACKEND
+React           NestJS
+Next.js         Node.js
+Angular         REST APIs
+   │               │
+   └───────┬───────┘
+           │
+           ▼
+       DATABASE
+       PostgreSQL
+       MySQL / SQL
+           │
+           ▼
+         DOCKER
+           │
+           ▼
+   ENTERPRISE SYSTEM
