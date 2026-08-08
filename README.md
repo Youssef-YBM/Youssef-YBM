@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0D1117,100:D6A85F&amp;height=210&amp;section=header&amp;text=YOUSSEF%20ERRAMI&amp;fontSize=48&amp;fontColor=D6A85F&amp;animation=fadeIn&amp;fontAlignY=36&amp;desc=ERP%20Architect%20%7C%20Software%20Engineer%20%7C%20Robotics%20%26%20AI&amp;descAlignY=54&amp;descColor=ffffff&amp;descAlign=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0D1117,100:D6A85F&amp;height=210&amp;section=header&amp;text=YOUSSEF%20ERRAMI&amp;fontSize=48&amp;fontColor=D6A85F&amp;animation=fadeIn&amp;fontAlignY=36&amp;desc=ERP%20Architect%20-%20Software%20Engineer%20-%20Robotics%20and%20AI&amp;descAlignY=54&amp;descColor=ffffff&amp;descAlign=50" width="100%"/>
 
 <img
   src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&amp;weight=700&amp;size=23&amp;duration=2600&amp;pause=1000&amp;color=D6A85F&amp;center=true&amp;vCenter=true&amp;width=850&amp;lines=Architecting+Enterprise+Systems;Building+ERP+Platforms;Engineering+Robotics+%26+Automation;Full-Stack+%7C+Backend+%7C+DevOps+%7C+AI"
