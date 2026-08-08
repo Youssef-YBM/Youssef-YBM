@@ -1,96 +1,116 @@
 <div align="center">
 
 <img
-  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=2800&pause=1300&color=D6A85F&center=true&vCenter=true&width=850&lines=YOUSSEF+ERRAMI;ERP+ARCHITECT+%2F+SOFTWARE+ENGINEER;ENTERPRISE+SYSTEMS+%2F+ROBOTICS+%2F+AUTOMATION"
-  alt="Youssef Errami"
+src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=25&duration=2500&pause=1100&color=D6A85F&center=true&vCenter=true&width=900&lines=YOUSSEF+ERRAMI;ERP+ARCHITECT;SOFTWARE+ENGINEER;ENTERPRISE+SYSTEMS+%7C+ROBOTICS+%7C+AI"
+alt="Youssef Errami"
 />
 
 <br>
 
-`ENTERPRISE SYSTEMS` &nbsp;•&nbsp;
-`FULL-STACK` &nbsp;•&nbsp;
-`ROBOTICS` &nbsp;•&nbsp;
-`AI`
+<sub>
+ENTERPRISE SYSTEMS&nbsp;&nbsp;•&nbsp;&nbsp;
+FULL-STACK&nbsp;&nbsp;•&nbsp;&nbsp;
+ROBOTICS&nbsp;&nbsp;•&nbsp;&nbsp;
+AI
+</sub>
 
 <br><br>
 
 <img
-  src="https://komarev.com/ghpvc/?username=Youssef-YBM&style=flat-square&color=D6A85F&label=PROFILE+VIEWS"
-  alt="Profile views"
+src="https://komarev.com/ghpvc/?username=Youssef-YBM&style=flat-square&color=D6A85F&label=PROFILE+VIEWS"
+alt="profile views"
 />
 
 </div>
 
----
+<br>
 
-<table>
+<!-- ===================================================== -->
+<!--                    MAIN DASHBOARD                     -->
+<!-- ===================================================== -->
+
+<table width="100%">
 <tr>
 
-<td width="22%" valign="top">
+<td width="25%" valign="top">
 
-### PROFILE
+### YOUSSEF
 
-**Youssef Errami**
+**ERP Architect**
 
-ERP Architect  
-Software Engineer  
-Robotics Enthusiast
+Software Engineer
 
-<br>
+Robotics Builder
 
-`Morocco`
+---
 
-`Software Engineering`
+### STATUS
 
-<br>
+🟢 **BUILDING**
+
+Enterprise Systems
+
+ERP Platforms
+
+Automation
+
+Robotics
+
+---
+
+### LOCATION
+
+🇲🇦 Morocco
+
+---
 
 ### FOCUS
 
-Enterprise Software  
-ERP Architecture  
-Automation  
-Robotics / IoT  
-AI Systems
+`ERP`
 
-<br>
+`Architecture`
 
-### MINDSET
+`Full-Stack`
 
-> Build systems,  
-> not demos.
+`AI`
+
+`Robotics`
+
+`IoT`
 
 </td>
 
-<td width="52%" valign="top">
+<td width="50%" valign="top">
 
-### ENGINEERING
+### ENGINEERING CORE
 
-I design and build **complete digital solutions for enterprises** — from architecture and database design to backend, frontend and deployment.
+I architect and build **enterprise software solutions** from business requirements through architecture, development, databases and deployment.
 
-My private work is mainly focused on solving **real business problems**, so many of my repositories remain private.
+My private projects focus primarily on **real enterprise use cases**, which means many repositories are intentionally private.
+
+<br>
 
 ```text
-BUSINESS
-   │
-   ▼
-ARCHITECTURE
-   │
-   ├───────────────┐
-   ▼               ▼
-FRONTEND        BACKEND
-React           NestJS
-Next.js         Node.js
-Angular         REST APIs
-   │               │
-   └───────┬───────┘
-           │
-           ▼
-       DATABASE
-       PostgreSQL
-       MySQL / SQL
-           │
-           ▼
-         DOCKER
-           │
-           ▼
-   ENTERPRISE SYSTEM
+                  BUSINESS
+                     │
+                     ▼
+             ┌───────────────┐
+             │  ARCHITECTURE │
+             └───────┬───────┘
+                     │
+          ┌──────────┴──────────┐
+          ▼                     ▼
+      FRONTEND                BACKEND
+      React                   NestJS
+      Next.js                 Node.js
+      Angular                 REST API
+          │                     │
+          └──────────┬──────────┘
+                     ▼
+                PostgreSQL
+                     │
+                     ▼
+                   Docker
+                     │
+                     ▼
+             ENTERPRISE SYSTEM
